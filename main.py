@@ -203,6 +203,14 @@ class TransferFunctionGUI(QMainWindow):
             self.stability_label.setText("Hiba: Nem szám érték!")
             return
 
+        if len(den) == 0 or all(d == 0 for d in den):
+            self.stability_label.setText("Hiba: Érvénytelen nevező \n(csak nullák vagy üres bemenet)!")
+            return
+
+        if not any(num):
+            self.stability_label.setText("Hiba: A számláló nem lehet minden \nelemében nulla!")
+            return
+
         system_ctrl = ctrl.tf(num, den)
         system_scipy = TransferFunction(num, den)
         poles = ctrl.poles(system_ctrl)
