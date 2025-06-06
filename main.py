@@ -323,6 +323,7 @@ class TransferFunctionGUI(QMainWindow):
         self.canvas_bottom.draw()
 
 
+
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     app.setStyle("Fusion")
