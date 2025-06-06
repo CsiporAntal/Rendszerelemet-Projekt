@@ -21,16 +21,19 @@ Ez a Python-alapú alkalmazás egy **Lineáris Időinvariáns (LTI)** rendszer e
 ## 🛠️ Telepítés
 
 1. **Python 3.10+ szükséges**  
-2. Virtuális környezet (opcionális, ajánlott):
+
+2. **Virtuális környezet létrehozása** *(ajánlott)*:
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
+# Aktiválás:
+source .venv/bin/activate     # macOS / Linux
+.venv\Scripts\activate        # Windows
 ```
-3.Szükséges csomagok telepítése:
 
+3.Szükséges csomagok telepítése:
 ```bash
-pip install numpy matplotlib scipy control PyQt6
+pip install -r requirements.txt
 ```
 
 ## ▶️ Használat
